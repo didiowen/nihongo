@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>〜で払えますか（可以用〜付款嗎？） — 日文文法</title>
+<link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&family=Noto+Sans+TC:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="chapter.css">
+</head>
+<body>
+<nav class="crumb"><a href="../index.html">← 首頁</a><a href="index.html">文法章節</a><a href="../grammar-quiz.html">文法測驗</a></nav>
+<article class="chapter">
+  <header class="chapter-head">
+    <p class="eyebrow">第 16 章 · 2026-09-12 學過</p>
+    <h1>〜で払えますか（可以用〜付款嗎？）</h1>
+  </header>
+  <div class="chapter-body">
+<h2>句型</h2>
+<pre><code>支付方式  ＋  で  ＋  払えますか</code></pre>
+<ul><li><strong>で</strong>＝表手段（用什麼方法）</li><li><strong>払えます</strong>＝払う（支付）的可能形：払う → 払える → 払えます</li></ul>
+<div class="table-wrap"><table><thead><tr><th>支付方式</th><th>說法</th></tr></thead><tbody><tr><td>卡片</td><td>カードで払えますか？</td></tr><tr><td>現金</td><td>現金で払えますか？</td></tr><tr><td>IC 卡</td><td>ICカードで払えますか？</td></tr></tbody></table></div>
+<blockquote><p>払う 是五段動詞（う段），可能形：語尾 う → える（払う→払える）</p></blockquote>
+  </div>
+</article>
+<p class="chapter-cta"><a href="../grammar-quiz.html?ch=16">練這一章的題目 →</a></p>
+<nav class="chapter-nav"><a class="prev" href="15.html">← もっと〜のはありますか（有更〜的嗎？）</a></nav>
+<footer class="chapter-foot"><a href="index.html">全部章節</a> · <a href="../notes/#/grammar.md">完整文法筆記</a> · <a href="https://ko-fi.com/ines8964">☕ Ko-fi</a></footer>
+<script>
+// 表格「日文／例句」欄自動附朗讀鍵（speakJa 與 quiz-common.js 同款、本地精簡版）
+let _gen = 0;
+function speakJa(text) {
+  try {
+    let t = text.replace(/[（(].*?[）)]/g, '').trim();
+    // 「食べる たべる」「かえる 帰る」這種漢字與假名並列的儲存格，整串唸出來會
+    // 把同一個字唸兩次。有純假名的那一段就只唸它——假名對 TTS 沒有讀音歧義。
+    if (/\s/.test(t)) {
+      const kana = t.split(/\s+/).find(s => /^[ぁ-んァ-ヶーヽヾ゛゜]+$/.test(s));
+      if (kana) t = kana;
+    }
+    if (!t) return;
+    _gen += 1;
+    speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(t);
+    u.lang = 'ja-JP'; u.rate = 0.85;
+    const v = speechSynthesis.getVoices().filter(v => v.lang.startsWith('ja'))[0];
+    if (v) u.voice = v;
+    speechSynthesis.speak(u);
+  } catch (e) { /* 無語音支援就靜默 */ }
+}
+document.addEventListener('DOMContentLoaded', () => {
+  // 欄名白名單——只有「這一欄裝的是日文」才掛朗讀鍵。漏了活用形那幾欄的話，
+  // 第6章的ます形與四個時態、第7章的て形全部沒有聲音，那正是最需要聽的地方。
+  const SPEAK_COLS = ['日文', '例句', '例', '例子', '例字', '句型', '假名', '讀法',
+                      '原形', '辭書形', '動詞', '禮貌體', 'ます形', 'て形', '＋する',
+                      '現在肯定', '現在否定', '過去肯定', '過去否定'];
+  document.querySelectorAll('.chapter-body table').forEach(tbl => {
+    const ths = [...tbl.querySelectorAll('thead th')].map(th => th.textContent.trim());
+    ths.forEach((h, col) => {
+      if (!SPEAK_COLS.includes(h)) return;
+      tbl.querySelectorAll('tbody tr').forEach(tr => {
+        const td = tr.children[col];
+        if (!td) return;
+        const raw = td.textContent.trim();
+        if (!raw || raw === '—' || /^[A-Za-z0-9\s.…]+$/.test(raw)) return;
+        const btn = document.createElement('button');
+        btn.className = 'speak-btn'; btn.type = 'button';
+        btn.title = '朗讀'; btn.textContent = '🔊';
+        btn.addEventListener('click', () => speakJa(raw));
+        td.appendChild(btn);
+      });
+    });
+  });
+});
+</script>
+</body>
+</html>
