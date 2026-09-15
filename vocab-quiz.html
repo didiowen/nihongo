@@ -252,9 +252,9 @@
 // 平假名測驗頁（hiragana-quiz.html）不再收這些字，兩頁的單字池互斥。
 // ═══════════════════════════════
 const vocabCards = [
-  // batch: 0 ＝ 預習（還沒上到的批次）。這三個字本來就在 hiragana-quiz.html，之後會正式教到；
+  // batch: 0 ＝ 預習（還沒上到的批次）。這些字本來就在 hiragana-quiz.html，之後會正式教到；
   // 教到那一批時把 batch 從 0 改成該批編號即可，不要另外新增一張卡。
-  { meaning: '收到', display: 'もらう', reading: 'morau', kanji: '貰う', topic: 'daily', batch: 0 },   // 批次12 會教
+  { meaning: '收到', display: 'もらう', reading: 'morau', kanji: '貰う', topic: 'daily', batch: 12 },   // 原預習卡，批次12（2026-09-15）正式教到
   { meaning: '壞掉', display: 'こわれる', reading: 'kowareru', kanji: '壊れる', topic: 'daily', batch: 0 },   // 批次14 會教
   { meaning: '近的', display: 'ちかい', reading: 'chikai', kanji: '近い', topic: 'daily', batch: 0 },   // 批次18 會教
   { meaning: '哥哥（對外謙稱）', display: 'あに', reading: 'ani', kanji: '兄', topic: 'family', batch: 1 },
@@ -538,6 +538,14 @@ const vocabCards = [
   { meaning: '襯衫', display: 'シャツ', reading: 'shatsu', topic: 'daily', batch: 30 },
   { meaning: '毛衣', display: 'セーター', reading: 'seetaa', topic: 'daily', batch: 30 },
   { meaning: '襪子', display: 'くつした', reading: 'kutsushita', kanji: '靴下', topic: 'daily', batch: 30 },
+  // 動詞 V2（batch 12）——もらう 沿用上面那張原預習卡（batch 0→12），不另建
+  { meaning: '關（他動詞）', display: 'しめる', reading: 'shimeru', kanji: '閉める', topic: 'daily', batch: 12 },
+  { meaning: '關（自動詞）', display: 'しまる', reading: 'shimaru', kanji: '閉まる', topic: 'daily', batch: 12 },
+  { meaning: '賣', display: 'うる', reading: 'uru', kanji: '売る', topic: 'daily', batch: 12 },
+  { meaning: '借入', display: 'かりる', reading: 'kariru', kanji: '借りる', topic: 'daily', batch: 12 },
+  { meaning: '出借', display: 'かす', reading: 'kasu', kanji: '貸す', topic: 'daily', batch: 12 },
+  { meaning: '使用', display: 'つかう', reading: 'tsukau', kanji: '使う', topic: 'daily', batch: 12 },
+  { meaning: '乘坐', display: 'のる', reading: 'noru', kanji: '乗る', topic: 'daily', batch: 12 },
 ];
 
 const lessonTitles = {
@@ -552,6 +560,7 @@ const lessonTitles = {
   8: '場所設施 B（含交通）',
   9: '食材 A（水果蔬菜）',
   11: '動詞 V1',
+  12: '動詞 V2',
   17: 'い形容詞 A1',
   24: '物品 O1',
   25: '物品 O2',
