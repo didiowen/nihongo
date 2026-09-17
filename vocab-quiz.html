@@ -255,7 +255,7 @@ const vocabCards = [
   // batch: 0 ＝ 預習（還沒上到的批次）。這些字本來就在 hiragana-quiz.html，之後會正式教到；
   // 教到那一批時把 batch 從 0 改成該批編號即可，不要另外新增一張卡。
   { meaning: '收到', display: 'もらう', reading: 'morau', kanji: '貰う', topic: 'daily', batch: 12 },   // 原預習卡，批次12（2026-09-15）正式教到
-  { meaning: '壞掉', display: 'こわれる', reading: 'kowareru', kanji: '壊れる', topic: 'daily', batch: 0 },   // 批次14 會教
+  { meaning: '壞掉（自動詞）', display: 'こわれる', reading: 'kowareru', kanji: '壊れる', topic: 'daily', batch: 14 },   // 原預習卡，批次14（2026-09-17）正式教到；標自動詞以便與批次15 的 壊す 區辨
   { meaning: '近的', display: 'ちかい', reading: 'chikai', kanji: '近い', topic: 'daily', batch: 0 },   // 批次18 會教
   { meaning: '哥哥（對外謙稱）', display: 'あに', reading: 'ani', kanji: '兄', topic: 'family', batch: 1 },
   { meaning: '姊姊（對外謙稱）', display: 'あね', reading: 'ane', kanji: '姉', topic: 'family', batch: 1 },
@@ -557,6 +557,13 @@ const vocabCards = [
   { meaning: '出借', display: 'かす', reading: 'kasu', kanji: '貸す', topic: 'daily', batch: 12 },
   { meaning: '使用', display: 'つかう', reading: 'tsukau', kanji: '使う', topic: 'daily', batch: 12 },
   { meaning: '乘坐', display: 'のる', reading: 'noru', kanji: '乗る', topic: 'daily', batch: 12 },
+  { meaning: '忘記', display: 'わすれる', reading: 'wasureru', kanji: '忘れる', topic: 'daily', batch: 14 },
+  { meaning: '教', display: 'おしえる', reading: 'oshieru', kanji: '教える', topic: 'daily', batch: 14 },
+  { meaning: '學習', display: 'ならう', reading: 'narau', kanji: '習う', topic: 'daily', batch: 14 },
+  { meaning: '開始（自動詞）', display: 'はじまる', reading: 'hajimaru', kanji: '始まる', topic: 'daily', batch: 14 },
+  { meaning: '開始（他動詞）', display: 'はじめる', reading: 'hajimeru', kanji: '始める', topic: 'daily', batch: 14 },
+  { meaning: '結束（自動詞）', display: 'おわる', reading: 'owaru', kanji: '終わる', topic: 'daily', batch: 14 },
+  { meaning: '完成（他動詞）', display: 'おえる', reading: 'oeru', kanji: '終える', topic: 'daily', batch: 14 },
 ];
 
 const lessonTitles = {
@@ -573,6 +580,7 @@ const lessonTitles = {
   10: '食材 B（甜點調味料）',
   11: '動詞 V1',
   12: '動詞 V2',
+  14: '動詞 V4',
   17: 'い形容詞 A1',
   24: '物品 O1',
   25: '物品 O2',
