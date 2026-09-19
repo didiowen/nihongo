@@ -2,10 +2,14 @@
 title: 學習日誌
 date:
   created: 2026-04-28T18:26:48
-  updated: 2026-09-19T17:36:59
+  updated: 2026-09-19T17:46:12
 alias: log
 ---
 # 學習日誌
+
+## 2026-09-19 17:46:12
+
+每日單字批次29：身體部位（配對文法第 23 項から／ので，pairings.json 23→29）。vocab-lessons.md 新增「批次29：身體部位」一節：身體當封閉系統列十三格完整表（8 新＋已學 頭／耳／顔／足／身体）；全部訓読み、台語鉤改到音読み複合詞找（手／首 台語 siú、日語同為 しゅ）；同音異字 鼻／花、髪／紙／神、歯 は 名詞念 ha；台語 h 走は行或か行改看華語聲母（髪 fà→はつ vs 学 xué→がく）；首 日中同形異義；接回第 23 章「部位＋が いたい＋ので／から」。vocab/batches.json 登錄，build_vocab_pages.py 產出 vocab/29.html 並重建 grammar/23.html（嵌入「這一課的單字」）。vocabulary.md 醫藥與健康區加 8 列＋註記、kanji.md 補 頭／顔／体／鼻／髪／首／歯／指，vocab-quiz.html 新增 13 張卡（batch 29）＋ lessonTitles，其中 あたま／みみ／あし／かお／からだ 自 hiragana-quiz.html 搬出並清掉 recentBatch 三筆。vocab-daily-progress.md 批次29 標 ✅。
 
 ## 2026-09-19 17:36:59
 
