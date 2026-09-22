@@ -2,10 +2,14 @@
 title: 學習日誌
 date:
   created: 2026-04-28T18:26:48
-  updated: 2026-09-22T17:32:56
+  updated: 2026-09-22T17:40:51
 alias: log
 ---
 # 學習日誌
+
+## 2026-09-22 17:40:51
+
+每日單字批次15：動詞 V5（配對文法第 26 項 た形，pairings.json 26→15）。vocab-lessons.md 新增「批次15：動詞 V5」一節，八字（こわす／なくす／みつける／ふる／てつだう／きる／ぬぐ／はく）都推到四格（原形／ます形／て形／た形）：着る 的 ます形／て形／た形與 来る 完全同形（きた），靠「衣服＋を」分，並以 切る（う動詞例外，きって）與第 26 章 きいた 對照；はいて（履く）vs はいって（入る）只差促音；ぬぐ→ぬいだ 清濁一起搬；ふる 看似る動詞實為う動詞、配 が。自他：壊す 兌現批次14 的伏筆（〜す 一律他動詞），無くす 同型，見つける／見つかる 屬 〜eる／〜aる 家族；なくす vs わすれる、無くなる vs 亡くなる。台語：壊 hoāi、無 bû、見 kiàn、降 kàng、手 chhiú、履 lí ✅；伝 thuân、脱 thuat 清濁錯位只認不推，着 改掛 着物。批次30 腰線表全員到齊；第七節以普通體日記＋丁寧體對照表接回第 26 章。vocab/batches.json 登錄，build_vocab_pages.py 產出 vocab/15.html 並重建 grammar/26.html（嵌入「這一課的單字」）。vocabulary.md 動作區加 8 列、kanji.md 補 無／伝／脱／履（壊／見／降／手／着 已有），vocab-quiz.html 新增 8 張卡（batch 15）＋ lessonTitles；八字皆不在 hiragana-quiz.html／katakana-quiz.html，無搬卡。vocab-daily-progress.md 批次15 標 ✅。
 
 ## 2026-09-22 17:32:56
 
