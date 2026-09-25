@@ -2,10 +2,14 @@
 title: 學習日誌
 date:
   created: 2026-04-28T18:26:48
-  updated: 2026-09-25T17:35:33
+  updated: 2026-09-25T17:48:00
 alias: log
 ---
 # 學習日誌
+
+## 2026-09-25 17:48:00
+
+每日單字批次21：副詞 D1（配對文法第 29 項〜と思う）。vocab-lessons.md 新增一節：時間進度 もう・まだ・また（もう 三義、まだ＝台語 猶 iáu、「還沒」用 〜て いません、まだ／また 一個濁點、また vs もういちど）、份量 すこし・ちょっと・だいたい（少 兩訓、ちょっと 婉拒、大体＝台語 大體 不連濁）、只接否定的 あまり；副詞留在 と 裡面跟著換便服。vocab/batches.json 登錄、產出 vocab/21.html 並重建 grammar/29.html；vocab-quiz.html 新增 7 張卡（batch 21）與 lessonTitles；vocabulary.md 新增「副詞」區塊；kanji.md 体 補 大体。
 
 ## 2026-09-25 17:35:33
 
