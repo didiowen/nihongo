@@ -2,10 +2,14 @@
 title: 學習日誌
 date:
   created: 2026-04-28T18:26:48
-  updated: 2026-09-26T17:35:16
+  updated: 2026-09-26T17:42:04
 alias: log
 ---
 # 學習日誌
+
+## 2026-09-26 17:42:04
+
+每日單字批次22：副詞 D2（配對文法第 30 項〜つもり，pairings.json 30→22）。vocab-lessons.md 新增一節：把握 たぶん（多分≈多半）・きっと（華語「一定」只接推測那半，要求改用 ぜひ）、願望 ぜひ（只接 たい／て ください／ましょう；是非 日中同形異義）、頻率 よく（いい 的副詞形，程度／頻率兩義，×いく）・ときどき（和語疊字連濁；與華語「時時」頻率相反）、方式與變化 ちゃんと（台語 好好仔；vs よく）・だんだん（配 〜く なる；漢語疊字不連濁）；接第 30 章決定程度表。vocab/batches.json 登錄、產出 vocab/22.html 並重建 grammar/30.html；vocab-quiz.html 新增 7 張卡（batch 22）與 lessonTitles；vocabulary.md 副詞區加 7 列；kanji.md 時 補 時々。七字皆不在 hiragana-quiz.html／katakana-quiz.html，無搬卡。
 
 ## 2026-09-26 17:35:16
 
