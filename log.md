@@ -2,10 +2,14 @@
 title: 學習日誌
 date:
   created: 2026-04-28T18:26:48
-  updated: 2026-09-27T17:34:54
+  updated: 2026-09-27T17:42:00
 alias: log
 ---
 # 學習日誌
+
+## 2026-09-27 17:42:00
+
+每日單字批次27：自然天氣（配對文法第 31 項〜でしょう，pairings.json 31→27）。vocab-lessons.md 新增一節：天空 くも（雲；同音 蜘蛛）・くもり（曇る 的 ます形去 ます，曇＝日＋雲）・はれ（晴れる 同一造法；晴 tsîng→せい；預報「晴れ時々曇り」＝晴時多雲，接批次22 ときどき）、溫度 すずしい（涼 liông→りょう；環境涼 vs 摸起來冰的 つめたい，與批次17 暖かい 排成體感尺）、地上 き（木 bo̍k→もく＝木曜日；同音 気）・くさ（草 tshó→そう；くさい＝臭い）；接第 31 章名詞／い形容詞接 でしょう 不補 だ。vocab/batches.json 登錄、產出 vocab/27.html 並重建 grammar/31.html；vocab-quiz.html 新增 6 張卡（batch 27）與 lessonTitles；vocabulary.md 自然區加 5 列、い形容詞加 涼しい；kanji.md 新增 雲・晴・曇・涼。六字皆不在 hiragana-quiz.html／katakana-quiz.html，無搬卡。
 
 ## 2026-09-27 17:34:54
 
