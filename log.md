@@ -2,10 +2,14 @@
 title: 學習日誌
 date:
   created: 2026-04-28T18:26:48
-  updated: 2026-09-28T17:35:47
+  updated: 2026-09-28T17:43:22
 alias: log
 ---
 # 學習日誌
+
+## 2026-09-28 17:43:22
+
+每日單字批次23：副詞 D3（配對文法第 32 項〜なければならない，pairings.json 32→23）。vocab-lessons.md 新增一節：頻率 たいてい（大抵，台語 tāi-tí 同義）・ぜんぜん（全然，只接否定、比 あまり 重一級，口語肯定只認得），補齊 いつも＞たいてい＞よく＞ときどき＞あまり＞ぜんぜん 頻率尺；程度 もっと（接第 15、32 章，與 もう すこし 分工，〇っと 家族）；第一次 はじめて（初 tshoo→しょ；⚠️初めて vs 始めて 同音，はじめまして＝初めまして）；方式 ゆっくり（vs おそい）・はっきり（はっきり わかりません＝說不準），〇っ〇り 家族。vocab/batches.json 登錄、產出 vocab/23.html 並重建 grammar/32.html；vocab-quiz.html 新增 6 張卡（batch 23）與 lessonTitles，其中 もっと、ゆっくり 自 hiragana-quiz.html 搬出（もっと 同步移出 recentBatch）；vocabulary.md 副詞區加 6 列；kanji.md 新增 全・然・初。
 
 ## 2026-09-28 17:35:47
 
