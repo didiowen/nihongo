@@ -1,0 +1,18 @@
+{
+  "_comment": [
+    "N5 衝刺模式設定。tools/quiz_push.py 讀這個檔；launchd（com.didiowen.nihongo-quiz-push）每小時整點觸發，",
+    "到了 push_hour 之後、當天還沒發過才會真的發（同一天只發一次）。改推送時間只要改 push_hour 一行。",
+    "約 11 月抵美後：push_hour 改成 13（台北 13:00 = 太平洋時間前一天 21:00；Danube 維持台北時區）。考試 2026-12-06（LA）。",
+    "modes：日期範圍（含頭尾）落在哪個 mode 就用哪個；都沒落到就用 normal。目前只實作 normal，",
+    "maintenance（考前維持量）／mock（模擬考）是預留位，填上 from/to 前不會生效，填上後腳本會警告並暫以 normal 行為發送。",
+    "suppress_1730_notification：true 時 17:30 排程（X/scripts/nihongo-grammar-notify.sh）照常產生內容，但不發獨立通知，改由這支 push 帶課程頁連結。"
+  ],
+  "push_hour": 21,
+  "chat_id": "-1004376655688",
+  "suppress_1730_notification": true,
+  "modes": {
+    "normal": {"from": "2026-09-29", "to": "2026-12-06", "questions": 3},
+    "maintenance": {"from": null, "to": null, "_todo": "考前幾天降量複習；日期與行為待定"},
+    "mock": {"from": null, "to": null, "_todo": "模擬考週；日期與行為待定"}
+  }
+}
