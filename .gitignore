@@ -4,3 +4,5 @@
 .claude/CLAUDE.md
 __pycache__/
 .DS_Store
+quiz/*.jsonl
+quiz/.poller-offset
