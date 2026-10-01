@@ -299,19 +299,41 @@ def main():
                 break
         return polls
 
-    # ── 題目 ──
-    if fresh:
-        ch = fresh
+    def chapter_polls(ch, k):  # 該章文法題＋1 題配對單字；不夠就從前面章節補
         batches = pairings.get(str(ch))
         batches = batches if isinstance(batches, list) else ([batches] if batches else [])
         vpool = [c for c in vcards if c.get("batch") in batches]
-        polls = pick_grammar([ch], n_questions - (1 if vpool else 0))
+        polls = pick_grammar([ch], k - (1 if vpool else 0))
         if vpool:
             vp = vocab_poll(random.choice(vpool), vpool if len(vpool) >= 4 else vcards)
             if vp:
                 polls.append(vp)
-        if len(polls) < n_questions:  # 當章題不夠就補前面章節
-            polls += pick_grammar([n for n in done if n != ch], n_questions - len(polls))
+        if len(polls) < k:
+            polls += pick_grammar([n for n in done if n != ch], k - len(polls))
+        return polls
+
+    # 複習期（push-config.json 的 review）：[from, start) 間完成的章節依序每天推 per_day 章，
+    # 推完一輪就回到一般模式（17:30 的 pause_new_chapters_until 應設成複習最後一天）。
+    rv = cfg.get("review") or {}
+    review_chs = []
+    if rv.get("from") and rv.get("start") and today.isoformat() >= rv["start"]:
+        seq = sorted(n for n, d in rows.items()
+                     if d and rv["from"] <= d < rv["start"] and str(n) in chapters)
+        per = int(rv.get("per_day", 1))
+        day = (today - dt.date.fromisoformat(rv["start"])).days
+        review_chs = seq[day * per:(day + 1) * per]
+        total_days = -(-len(seq) // per)
+
+    # ── 題目 ──
+    if review_chs:
+        polls = []
+        for c in review_chs:
+            polls += chapter_polls(c, n_questions)
+        ch = review_chs[0]
+        header = f"複習 第 {day + 1}／{total_days} 天"
+    elif fresh:
+        ch = fresh
+        polls = chapter_polls(ch, n_questions)
         header = f"第 {ch} 章：{chapters[str(ch)]}"
     else:
         ch = random.choice(done[-10:])  # 複習日：從最近十章挑一章當文法卡
@@ -333,8 +355,15 @@ def main():
     ref_day = last_answer or first_sent
     if ref_day and (today - dt.date.fromisoformat(ref_day)).days > 3 and not args.test:
         lines.append("📣 點名：已經超過 3 天沒作答了——要繼續、調整，還是暫停？回覆一聲就好。")
-    lines += ["", header] + grammar_card_lines(chapters[str(ch)])
-    lines += ["", f"課程頁 {SITE}/grammar/{ch:02d}.html", "下面三題，點一下作答 👇"]
+    if review_chs:
+        lines += ["", header]
+        for c in review_chs:
+            lines += ["", f"第 {c} 章：{chapters[str(c)]}"] + grammar_card_lines(chapters[str(c)])
+        lines += [""] + [f"課程頁 {SITE}/grammar/{c:02d}.html" for c in review_chs]
+    else:
+        lines += ["", header] + grammar_card_lines(chapters[str(ch)])
+        lines += ["", f"課程頁 {SITE}/grammar/{ch:02d}.html"]
+    lines.append(f"下面 {len(polls)} 題，點一下作答 👇")
     if args.test:
         lines = ["（測試）N5 衝刺模式 poll 測試，請忽略。"]
     text = "\n".join(lines)
