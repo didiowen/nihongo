@@ -1,9 +1,9 @@
 # 每日文法上架紀錄（最新一次）
 
-- 日期：2026-11-01
-- 項目：第 50 項　〜ながら／〜まえに／〜とき（一邊〜／〜之前／〜的時候）
-- 章節頁：https://didiowen.github.io/nihongo/grammar/50.html
+- 日期：2026-11-02
+- 項目：第 51 項　〜たり〜たりする（〜啦、〜啦：挑幾個動作舉例）
+- 章節頁：https://didiowen.github.io/nihongo/grammar/51.html
 - 測驗頁：https://didiowen.github.io/nihongo/grammar-quiz.html
-- 新增題目（batch 47，共 16 題）：c50-q1、c50-q2、c50-q3、c50-q4、c50-q5、c50-q6、c50-q7、c50-q8、c50-q9、c50-q10、c50-q11、c50-q12、c50-q13、c50-q14、c50-q15、c50-q16
+- 新增題目（batch 48，共 16 題）：c51-q1、c51-q2、c51-q3、c51-q4、c51-q5、c51-q6、c51-q7、c51-q8、c51-q9、c51-q10、c51-q11、c51-q12、c51-q13、c51-q14、c51-q15、c51-q16
 - 驗證：build_grammar_pages.py ✓、validate_quiz_data.py ✓
-- 單字配對：grammar/pairings.json 尚無第 50 項
+- 單字配對：grammar/pairings.json 尚無第 51 項
